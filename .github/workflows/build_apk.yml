@@ -24,12 +24,14 @@ jobs:
 
       - name: Install Dependencies
         run: flutter pub get
+        working-directory: ./north_quay_app
 
       - name: Build APK
         run: flutter build apk --release
+        working-directory: ./north_quay_app
 
       - name: Upload APK Artifact
         uses: actions/upload-artifact@v4
         with:
           name: north-quay-app-release
-          path: build/app/outputs/flutter-apk/app-release.apk
+          path: north_quay_app/build/app/outputs/flutter-apk/app-release.apk
