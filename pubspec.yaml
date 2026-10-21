@@ -34,5 +34,4 @@ jobs:
         with:
           name: north-quay-app-release
           path: build/app/outputs/flutter-apk/app-release.apk 
-          environment:
-          sdk: '^3.13.0'
+        
